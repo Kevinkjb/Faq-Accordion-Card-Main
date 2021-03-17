@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    display: grid;
+    background: linear-gradient(to bottom, hsl(273, 75%, 66%) 5%, hsl(240, 73%, 65%) 50%);
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    place-items: center;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+hr{
+    width: 80%;
+    border: 1px solid rgb(197, 193, 193);
+    opacity: .5;
+
+}
+h1{
+    position: relative;
+    left: 15px;
+    padding-bottom: 15px;
+}
+
+.arrow{
+    margin-top: 20px;
+}
+
+.container{
+ display: grid;
+ background-color: white;
+ min-height: 50vh;
+ width: 50%;
+ border-radius: 25px;
+ grid-template-rows: 1fr;
+ grid-template-columns: repeat(2, 1fr);
+ padding-bottom: 20px;
+}
+
+.accordion-left{
+position: relative;
+}
+
+.accordion-right{
+    padding: 80px 0 0 80px;
+    text-align: left;
+    position: relative;
+    right: 5%;
+}
+.faq{
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    padding: 18px;
+    color: hsl(237, 12%, 33%);
+    font-size: 12px;
+}
+.accordion-title{
+    padding: 18px;
+    text-align: left;
+    outline: none;
+    font-size: 13px;
+    position: relative;
+}
+
+.accordion{
+    display: grid;
+    grid-template-columns: 1fr .3fr;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.woman-image{
+    width: 500px;
+    position: absolute;
+    top: 13%;
+    left: -16%;
+    clip-path: inset(0px 0px 0px 74px);
+}
+
+.pattern-image{
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    left: -80%;
+    clip-path: inset(215px 0px 0px 244px);
+    top: -40%;
+    opacity: .8;
+}
+
+.box-image{
+    position: absolute;
+    top: 58%;
+    left: -20%;
+    animation: mymove infinite 4s;
+}
+
+
+
+.bold {
+    font-weight: bold;
+}
+
+.caret{
+    transform: rotate(180deg);
+}
+
+.active, .accordion:hover{
+    color: hsl(14, 88%, 65%);
+}
+
+
+@keyframes mymove{
+    from{ left: -40%;}
+    to{left: -18%;}
+}
+ 
+@media(max-width: 1600px){
+    .accordion-left{
+        display: none;
+        }
+        .container{
+            display: grid;
+            background-color: white;
+            min-height: 50vh;
+            width: 60%;
+            border-radius: 25px;
+            grid-template-columns: 1fr;
+            place-items: center;
+            align-items: center;
+            padding-bottom: 20px;
+           }
+           .accordion-right{
+            right: 30px;
+        
+        }
+        hr{
+            width: 80%;
+        }
+}
+@media(max-width: 700px){
+    hr{
+        width: 80%;
+    }
+    .container{
+        width: 60%;
+    }
+    .accordion-right{
+      right: 30px
+    }
+    .attribution{
+        padding: 0 40px;
+        text-align: center;
+    }
+}
+@media(max-width: 400px){
+    .container{
+        width: 70%;
+    }
+}
